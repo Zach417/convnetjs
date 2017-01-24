@@ -35,7 +35,7 @@ console.log("Generating neural network");
 var json = JSON.parse(fs.readFileSync(__dirname + "/spam-classifier.json"));
 var net = new cnn.net();
 net.makeLayers(layer_defs);
-//net.fromJSON(json);
+net.fromJSON(json);
 
 var trainer = new cnn.trainer(net, {
   method: 'adadelta',
