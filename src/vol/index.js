@@ -98,8 +98,8 @@ Vol.prototype = {
     this.depth = json.depth;
 
     var n = this.sx*this.sy*this.depth;
-    this.w = global.zeros(n);
-    this.dw = global.zeros(n);
+    this.w = utils.zeros(n);
+    this.dw = utils.zeros(n);
     // copy over the elements.
     for(var i=0;i<n;i++) {
       this.w[i] = json.w[i];

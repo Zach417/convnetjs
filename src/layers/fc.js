@@ -91,11 +91,11 @@ FullyConnLayer.prototype = {
     this.l2_decay_mul = typeof json.l2_decay_mul !== 'undefined' ? json.l2_decay_mul : 1.0;
     this.filters = [];
     for(var i=0;i<json.filters.length;i++) {
-      var v = new Vol(0,0,0,0);
+      var v = new vol(0,0,0,0);
       v.fromJSON(json.filters[i]);
       this.filters.push(v);
     }
-    this.biases = new Vol(0,0,0,0);
+    this.biases = new vol(0,0,0,0);
     this.biases.fromJSON(json.biases);
   }
 }
